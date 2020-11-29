@@ -65,6 +65,7 @@ export default class TextField extends PureComponent {
     disabled: false,
     
     textInputComponent: TextInput,
+    inputProps: {}
   };
 
   static propTypes = {
@@ -119,6 +120,8 @@ export default class TextField extends PureComponent {
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,
+    
+    inputProps: PropTypes.object,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
@@ -440,7 +443,7 @@ export default class TextField extends PureComponent {
   }
 
   inputProps() {
-    let store = {};
+    let store = {...this.props.inputProps};
 
     for (let key in TextInput.propTypes) {
       if ('defaultValue' === key) {
