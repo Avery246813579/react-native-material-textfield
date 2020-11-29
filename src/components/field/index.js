@@ -63,6 +63,8 @@ export default class TextField extends PureComponent {
     disabledLineType: 'dotted',
 
     disabled: false,
+    
+    textInputComponent: TextInput,
   };
 
   static propTypes = {
@@ -94,6 +96,7 @@ export default class TextField extends PureComponent {
 
     label: PropTypes.string,
     title: PropTypes.string,
+    textInputComponent: PropTypes.func,
 
     characterRestriction: PropTypes.number,
 
@@ -596,13 +599,14 @@ export default class TextField extends PureComponent {
       editable,
       tintColor,
       style: inputStyleOverrides,
+      textInputComponent: TextInputComponent
     } = this.props;
 
     let props = this.inputProps();
     let inputStyle = this.inputStyle();
 
     return (
-      <TextInput
+      <TextInputComponent
         selectionColor={tintColor}
 
         {...props}
