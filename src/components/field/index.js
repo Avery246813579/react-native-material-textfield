@@ -97,7 +97,7 @@ export default class TextField extends PureComponent {
 
     label: PropTypes.string,
     title: PropTypes.string,
-    textInputComponent: PropTypes.func,
+    textInputComponent: PropTypes.object,
 
     characterRestriction: PropTypes.number,
 
