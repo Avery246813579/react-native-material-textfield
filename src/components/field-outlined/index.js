@@ -58,4 +58,8 @@ export default class OutlinedTextField extends TextField {
       <Outline {...props} labelWidth={labelWidth} />
     );
   }
+
+  render() {
+    return super.render();
+  }
 }
