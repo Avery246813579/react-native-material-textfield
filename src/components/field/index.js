@@ -25,10 +25,10 @@ function startAnimation(animation, options, callback) {
 }
 
 function labelStateFromProps(props, state) {
-  let { placeholder, defaultValue } = props;
-  let { text, receivedFocus } = state;
+  let { placeholder, defaultValue, value } = props;
+  let { receivedFocus } = state;
 
-  return !!(placeholder || text || (!receivedFocus && defaultValue));
+  return !!(placeholder || value || (!receivedFocus && defaultValue));
 }
 
 function errorStateFromProps(props, state) {
