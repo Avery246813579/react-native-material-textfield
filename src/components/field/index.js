@@ -276,7 +276,7 @@ export default class TextField extends PureComponent {
     let { current: input } = this.inputRef;
 
     if (!disabled && editable) {
-      input && input.focus();
+      input && input.focus && input.focus();
     }
   }
 
