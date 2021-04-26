@@ -63,7 +63,7 @@ export default class TextField extends PureComponent {
     disabledLineType: 'dotted',
 
     disabled: false,
-    
+
     textInputComponent: TextInput,
     inputProps: {}
   };
@@ -120,7 +120,7 @@ export default class TextField extends PureComponent {
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,
-    
+
     inputProps: PropTypes.object,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
@@ -276,7 +276,7 @@ export default class TextField extends PureComponent {
     let { current: input } = this.inputRef;
 
     if (!disabled && editable) {
-      input.focus();
+      input && input.focus();
     }
   }
 
